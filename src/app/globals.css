@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@tailwind utilities;
 
 body {
   color: rgb(33, 65, 135); /* Brand Blue */
