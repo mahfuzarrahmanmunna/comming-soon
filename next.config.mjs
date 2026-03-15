@@ -2,7 +2,7 @@
 const nextConfig = {
   /* config options here */
   output: "export",
-  output: "standalone",
+  // output: "standalone",
   images: {
     unoptimized: true,
   },
