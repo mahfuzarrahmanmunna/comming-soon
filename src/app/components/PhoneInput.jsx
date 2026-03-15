@@ -137,7 +137,7 @@ export default function PhoneInput({ value, onChange }) {
 
       {/* Custom Dropdown Menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 z-50 mt-3 w-full bg-white/95 backdrop-blur-md border-4 border-brand-blue rounded-3xl shadow-2xl z-50 max-h-[320px] overflow-hidden flex flex-col animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="absolute bottom-full left-0 z-50 mt-3 w-full bg-white/95 backdrop-blur-md border-4 border-brand-blue rounded-3xl shadow-2xl z-50 max-h-[320px] overflow-hidden flex flex-col animate-in fade-in slide-in-from-top-2 duration-200">
           {/* Search Header */}
           <div className="p-3 border-b border-brand-blue/10 bg-blue-50/30">
             <div className="relative">

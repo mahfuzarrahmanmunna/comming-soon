@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { fredoka } from "./fonts";
 import PhoneInput from "./components/PhoneInput";
 import Image from "next/image";
+import { Youtube } from "lucide-react";
 // import logo from "./assets";
 
 export default function Home() {
@@ -89,7 +90,7 @@ export default function Home() {
               alt="Chalak Champs Logo"
               width={500}
               height={200}
-              className="h-8 md:h-32 w-auto object-contain"
+              className="h-8 md:h-28 w-auto object-contain"
               priority
             />
           </div>
@@ -125,7 +126,7 @@ export default function Home() {
         <div>
           <div className="text-center  mb-12">
             <div className="inline-block mb-4 animate-bounce">
-              <span className="bg-brand-yellow text-brand-blue font-display font-bold text-sm md:text-base px-4 py-1 rounded-full uppercase tracking-widest shadow-md">
+              <span className="bg-yellow-400 text-brand-blue font-display font-bold text-sm md:text-base px-4 py-1 rounded-full uppercase tracking-widest shadow-md">
                 #1 Kids EdTech Platform
               </span>
             </div>
@@ -135,11 +136,11 @@ export default function Home() {
               className={`font-display font-bold text-5xl md:text-7xl lg:text-8xl text-white leading-tight mb-6 drop-shadow-lg ${fredoka.className}`}
             >
               Unleashing the <br />
-              <span className="text-brand-yellow">Genius</span> Inside.
+              <span className="text-yellow-400">Genius</span> Inside.
             </h1>
 
             {/* H2 Tag: Subheading */}
-            <h2 className="text-lg md:text-2xl text-white/90 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+            <h2 className="text-lg md:text-2xl text-white/90 font-light max-w-2xl  mx-auto mb-10 leading-relaxed">
               We are crafting a magical world of learning for your little ones.
               Get ready for <strong>Chalak Champs</strong>, the newest
               innovation from the creators of Lingual Academy.
@@ -261,73 +262,129 @@ export default function Home() {
         </section>
       </main>
 
-      {/* --- Footer --- */}
-      <footer className="w-full py-8 text-center relative">
-        <div className="flex justify-center gap-6 mb-4">
-          <a
-            href="#"
-            className="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-blue transition-colors"
-            aria-label="Facebook"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+      <footer className="glass-panel w-full py-10 text-center relative z-10 mt-auto">
+        {/* Social Media Icons */}
+        <div className="flex flex-wrap justify-center items-center gap-6 mb-6">
+          {/* --- Facebook (Chalak Champs) --- */}
+          <div className="group relative">
+            <a
+              href="https://www.facebook.com/chalakchampsbd/"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-white transition-all duration-300 hover:bg-brand-yellow hover:text-brand-blue hover:scale-110 hover:shadow-[0_8px_20px_rgba(255,195,0,0.4)] hover:-translate-y-1"
+              aria-label="Chalak Champs Facebook"
+              target="_blank"
             >
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-            </svg>
-          </a>
-          <a
-            href="#"
-            className="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-blue transition-colors"
-            aria-label="Instagram"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                stroke="none"
+              >
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            {/* Tooltip */}
+            <div className="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
+              <span className="bg-brand-blue text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+                Chalak Champs
+              </span>
+              {/* Tiny Arrow for Tooltip */}
+              <div className="w-2 h-2 bg-brand-blue rotate-45 mx-auto -mt-1"></div>
+            </div>
+          </div>
+
+          {/* --- Facebook (Lingual Academy) --- */}
+          <div className="group relative">
+            <a
+              href="https://www.facebook.com/lingualacademy.com.bd/"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-white transition-all duration-300 hover:bg-brand-yellow hover:text-brand-blue hover:scale-110 hover:shadow-[0_8px_20px_rgba(255,195,0,0.4)] hover:-translate-y-1"
+              aria-label="Lingual Academy Facebook"
+              target="_blank"
             >
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-          </a>
-          <a
-            href="#"
-            className="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-blue transition-colors"
-            aria-label="Twitter"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              {/* Using a slightly different shade or icon style? Let's keep consistent but rely on tooltip */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                stroke="none"
+              >
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            {/* Tooltip */}
+            <div className="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
+              <span className="bg-brand-blue text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+                Lingual Academy
+              </span>
+              <div className="w-2 h-2 bg-brand-blue rotate-45 mx-auto -mt-1"></div>
+            </div>
+          </div>
+
+          {/* --- YouTube (Chalak Champs) --- */}
+          <div className="group relative">
+            <a
+              href="https://www.youtube.com/@lingualacademy"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-white transition-all duration-300 hover:bg-brand-yellow hover:text-brand-blue hover:scale-110 hover:shadow-[0_8px_20px_rgba(255,195,0,0.4)] hover:-translate-y-1"
+              aria-label="Chalak Champs YouTube"
+              target="_blank"
             >
-              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-            </svg>
-          </a>
+              <Youtube />
+            </a>
+            {/* Tooltip */}
+            <div className="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
+              <span className="bg-brand-blue text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+                Lingual Academy
+              </span>
+              <div className="w-2 h-2 bg-brand-blue rotate-45 mx-auto -mt-1"></div>
+            </div>
+          </div>
+
+          {/* --- LinkedIn (Lingual Academy) --- */}
+          <div className="group relative">
+            <a
+              href="https://www.linkedin.com/company/lingual-academy/"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-white transition-all duration-300 hover:bg-brand-yellow hover:text-brand-blue hover:scale-110 hover:shadow-[0_8px_20px_rgba(255,195,0,0.4)] hover:-translate-y-1"
+              aria-label="Lingual Academy LinkedIn"
+              target="_blank"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                stroke="none"
+              >
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            {/* Tooltip */}
+            <div className="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
+              <span className="bg-brand-blue text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+                Lingual Academy
+              </span>
+              <div className="w-2 h-2 bg-brand-blue rotate-45 mx-auto -mt-1"></div>
+            </div>
+          </div>
         </div>
 
-        <p className="text-brand-blue font-bold text-sm opacity-80">
+        {/* Copyright Text */}
+        <p className="text-brand-blue font-bold text-sm opacity-90 tracking-wide">
           &copy; {new Date().getFullYear()} Chalak Champs. A Sister Company of
-          Lingual Academy.
+          &nbsp;
+          <a
+            href="https://www.lingualacademy.com.bd/"
+            target="_blank"
+            className="text-white hover:text-blue-300 transition-colors underline decoration-2 underline-offset-4"
+          >
+            Lingual Academy
+          </a>
+          .
         </p>
       </footer>
     </main>
